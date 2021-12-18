@@ -10,7 +10,7 @@
 8.  notasEstudiantes[1][2] <-- 7
 9.  Escribir notasEstudiantes[0][2] // 8
 10. Escribir notasEstudiantes[1][1] // 5
-11. Escribir notasEstudiantes[1][2] // ? 
+11. Escribir notasEstudiantes[1][2] // 7 
 12. Fin
 
 

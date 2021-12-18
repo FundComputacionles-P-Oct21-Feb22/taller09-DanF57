@@ -1,0 +1,36 @@
+/*
+9	10	7	8
+10	 5	7	9
+7	9.4	10	9
+
+Jerry Ponce	Gabriela Lewis	  David Bell
+*/
+
+1 Inicio 
+2 (notas(3)(4),d[1-n])
+3 (estudiantes(3),x(100)[{a-z},{A-Z},{BS}]) 
+4 estudiantes[0] <-- "Jerry Ponce"
+5 estudiantes[1] <-- "Gabriela Lewis"
+6 estudiantes[2] <-- "David Bell"
+7 (promedios(3),d[1-n])
+8 fila, i[0-n]
+9 columna, i[0-n]
+10 suma, d[0-n] <-- 0
+
+11 Para(fila<--0, fila<3, 1) haga //0<3 v //1<3 v // 2<3 v //3<3 f
+12      Para(columna<--0, columna<4, 1) haga //0<4 v //1<4 v //2<4 v //3<4 v //4<4 f //0<4 v
+13        suma = [fila][columna] + suma //9 + 0 = 9   //9 + 10 = 19 //19 + 7 = 26 //26 + 8 = 34 
+					//10 + 0 = 10 //5 + 10 = 15 //7 + 15 = 22 //9 + 22 = 31 
+14	  promedio[fila] = suma/4 // promedio[0]= 34/4 = 8.5 //promedio[1] = 31/4 = 7.75 //promedio[2] = 35.4/4 = 8.85
+15      Fin_Para
+16 Fin_Para
+
+17 Para (i<--0, i<3, 1) haga
+18 << "Estudiante: " + estudiantes[i] + "tiene un promedio de " + promedio[i] 
+19 Fin_Para
+
+20 Fin
+
+// Estudiante: Jerry Ponce tiene un promedio de 8.5
+// Estudiante: Gabriela Lewis tiene un promedio de 7.75
+// Estudiante: David Bell tiene un promedio de 8.85
